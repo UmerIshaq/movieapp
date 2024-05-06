@@ -1,0 +1,42 @@
+@media (max-width:768px) {
+
+  .movie-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  detail-btns{
+    display: flex;
+    /* flex-direction: ; */
+  }
+  .basic-btn{
+    font-size: 70%;
+    display: block;
+  }
+  .release-date{
+    font-size: 70%;
+  }
+  .genres{
+    display: flex;
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+
+  .overview{
+    display: none;
+  }
+}
+@media (max-width:488px) {
+    .hero-sec{
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center !important;
+    }
+    .hero-img{
+        text-align: center;
+    }
+    .movie-detail{
+        text-align: center;
+    }
+}
