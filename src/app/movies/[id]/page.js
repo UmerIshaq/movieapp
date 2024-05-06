@@ -14,6 +14,7 @@ export default async function MovieDetailPage({ params }) {
           <div className="hero-img">
             <img
               src={IMAGE_BASE_URL + movieDetails.poster_path}
+              alt="A movie Poster Image"
               style={{height:"20rem"}}
             />
           </div>
@@ -60,6 +61,7 @@ export default async function MovieDetailPage({ params }) {
                   <img
                     className="card-image"
                     src={IMAGE_BASE_URL + movie.poster_path}
+                    alt="A movie Poster Image"
                   />
                   <div
                     className="card-body overflow-y-auto"

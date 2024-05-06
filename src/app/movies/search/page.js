@@ -23,6 +23,7 @@ export default async function SearchPage({searchParams}){
                         <img
                           className="card-image"
                           src={IMAGE_BASE_URL + movie.poster_path}
+                          alt="A movie Poster Image"
                         />
                         <div
                           className="card-body overflow-y-auto"
