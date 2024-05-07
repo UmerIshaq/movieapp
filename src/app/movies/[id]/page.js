@@ -7,7 +7,6 @@ export default async function MovieDetailPage({ params }) {
   const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w440_and_h660_face";
   const movieDetails = await getMovieDetails(params.id);
   const similarMovies= await getSimilarMovies(params.id)
-  // console.log(movieDetails)
   return (
     <div className="container py-3">
       <div className=" ">
