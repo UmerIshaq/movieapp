@@ -17,6 +17,7 @@ export default async function HomePage() {
                   <Link
                     className="text-decoration-none "
                     href={`/movies/${movie.id}`}
+                    key={movie.id}
                   >
                     <div className="card " style={{ width: "12.3rem" }}>
                       <Image

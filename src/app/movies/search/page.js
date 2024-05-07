@@ -7,7 +7,7 @@ export default async function SearchPage({searchParams}){
     const searchText=searchParams.query;
     const movies=await getMovies(searchText)
     return(
-        <div>
+      <div>
         <div className="container ">
           <div className="">
             <h1 className="pb-5 py-5 text-center">Top Search Results For &quot;{searchText}&quot;</h1>
@@ -15,12 +15,12 @@ export default async function SearchPage({searchParams}){
               {movies.results.map((movie) => {
                 return (
                     (movie.poster_path)!==null?
-                    <div>
+                    <div key={movie.id}>
                     <Link
                       className="text-decoration-none "
                       href={`/movies/${movie.id}`}
                     >
-                      <div className="card " style={{ width: "12.3rem" }}>
+                      <div className="card " style={{ width: "12.3rem" }} key={movie.id}>
                         <Image
                           className="card-image"
                           src={IMAGE_BASE_URL + movie.poster_path}

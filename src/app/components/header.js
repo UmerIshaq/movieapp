@@ -17,7 +17,7 @@ function Header() {
     <div>
       <nav className="navbar navbar-dark bg-dark p-3">
         <div className="container">
-          <Link className="navbar-brand" href='/' style={{fontSize:"1.5rem"}}><b>Movies DB</b></Link>
+        <Link className="navbar-brand" href={{ pathname: '/' }} style={{fontSize:"1.5rem"}}><b>Movies DB</b></Link>
           <form onSubmit={(e)=>handleSubmit(e)} className="d-flex">
             <input 
               onChange={(e)=>setSearchText(e.target.value)} 
