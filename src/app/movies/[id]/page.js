@@ -1,6 +1,7 @@
 import { getMovieDetails, getSimilarMovies } from "../../../../utils/requests";
 import "@/app/style.css"
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function MovieDetailPage({ params }) {
   const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w440_and_h660_face";
@@ -12,10 +13,12 @@ export default async function MovieDetailPage({ params }) {
       <div className=" ">
         <div className="hero-sec d-flex ">
           <div className="hero-img">
-            <img
+            <Image
               src={IMAGE_BASE_URL + movieDetails.poster_path}
+              width={230}
+              height={350}
               alt="A movie Poster Image"
-              style={{height:"20rem"}}
+
             />
           </div>
           {/*  */}
@@ -58,9 +61,11 @@ export default async function MovieDetailPage({ params }) {
                   <Link  className="text-decoration-none "
                   href={`/movies/${movie.id}`}>
                   <div className="card " style={{ width: "12.3rem" }}>
-                  <img
+                  <Image
                     className="card-image"
                     src={IMAGE_BASE_URL + movie.poster_path}
+                    width={195}
+                    height={300}
                     alt="A movie Poster Image"
                   />
                   <div

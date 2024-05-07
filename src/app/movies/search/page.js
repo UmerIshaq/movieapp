@@ -1,5 +1,6 @@
 import { getMovies } from "../../../../utils/requests";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function SearchPage({searchParams}){
     const IMAGE_BASE_URL = "https://media.themoviedb.org/t/p/w440_and_h660_face";
@@ -9,7 +10,7 @@ export default async function SearchPage({searchParams}){
         <div>
         <div className="container ">
           <div className="">
-            <h1 className="pb-3 py-3">Top Search Results For &quot;{searchText}&quot;</h1>
+            <h1 className="pb-5 py-5 text-center">Top Search Results For &quot;{searchText}&quot;</h1>
             <div className="d-flex justify-content-center flex-wrap gap-3  py-3">
               {movies.results.map((movie) => {
                 return (
@@ -20,9 +21,11 @@ export default async function SearchPage({searchParams}){
                       href={`/movies/${movie.id}`}
                     >
                       <div className="card " style={{ width: "12.3rem" }}>
-                        <img
+                        <Image
                           className="card-image"
                           src={IMAGE_BASE_URL + movie.poster_path}
+                          width={195}
+                          height={300}
                           alt="A movie Poster Image"
                         />
                         <div

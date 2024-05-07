@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getTrendingMovies } from "../../utils/requests";
+import Image from "next/image";
 
 export default async function HomePage() {
   const movies = await getTrendingMovies();
@@ -12,15 +13,17 @@ export default async function HomePage() {
           <div className="d-flex flex-wrap align-items-center justify-content-center gap-3  py-3">
             {movies.map((movie) => {
               return (
-                <div>
+                <div key={movie.id}>
                   <Link
                     className="text-decoration-none "
                     href={`/movies/${movie.id}`}
                   >
                     <div className="card " style={{ width: "12.3rem" }}>
-                      <img
+                      <Image
                         className="card-image"
                         src={IMAGE_BASE_URL + movie.poster_path}
+                        width={195}
+                        height={300}
                         alt="A movie Poster Image"
                       />
                       <div
